@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Go Voyage</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/8a26f48f96.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="images_1/gov.jpg">
+<style>
+.btn {
+    margin-top: 50px;
+    margin-left: 450px;
+}
+a.blue {
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 13px 35px;
+    background-color: #fff;
+    font-weight: 600;
+    border-radius: 15px;
+    color: #fff;
+    background: #FDC93B;
+    transition: 0.3s ease;
+}
+a.blue:hover{
+    color: rgb(21, 21, 100);
+    background: #fff;
+}
+        </style>
+    </head>
+    <body>
+        <!--nav bar-->
+        <nav class="navbar-main">
+            <img class="logoimg" src="images_1/newlogo2.png" alt="">
+            <div class="navigation">
+                <ul>
+                    <i id="memu-close" class="fa-solid fa-circle-xmark"></i>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="destination.html">Destination</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><div onclick="window.location.href='signup.html';" class="courses">   
+                        <a href="signup.php" class="signin-link"></a>
+                        <button class="signin-button">Sign in</button>
+                    </div>
+                    </li>
+                    <li class="cart-container">
+                        <a class="active" href="cart.html" class="cart-link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div> 
+        </nav>
+        <!-- Home -->
+        <section id="course-inner">
+            <div class="overview">
+                <img class="course-img" src="images_1/plan01.jpg" alt="">
+                <div class="course-head">
+                    <div class="c-name">
+                        <h1>Explore Delhi</h1>
+                        <p>
+                           Hyderabad - Delhi
+                        </p>
+                    </div>
+
+                </div>
+                <hr>
+                <h1>Summary of Travel Plan for 6 Friends</h1>
+                <section id="code">
+                    <h2>Daily Itinerary and Costs</h2>
+                        <code class="codehtml">
+                           <h3>Day 1: Hyderabad to Delhi</h3>
+                           <p>Train from Hyderabad to Delhi (3AC class). Cost: ₹1,000 per person.</p>
+                           <p>Budget hotel. Cost: ₹500 per night per person.</p> 
+                           <p>Meals: ₹400 per day.</p>
+                           <p>Relax or explore nearby markets.</p>
+                           <h5>Day 1 Cost per Person: ₹1,000 (train) + ₹500 (accommodation) + ₹400 (meals) = ₹1,900</h5>
+                           <h5>Day 1 Cost for 6 Friends: ₹1,900 x 6 = ₹11,400</h5>
+
+                           <h3>Day 2: Delhi Sightseeing</h3>
+                           <p>Red Fort, Jama Masjid, Chandni Chowk.</p> 
+                           <p>Meals: Local restaurants.</p>
+                           <p>Budget hotel. Cost: ₹500 per night per person.</p>
+                           <h5>Day 2 Cost per Person: ₹500 (accommodation) + ₹400 (meals) + ₹250 (local transport and entry fees) = ₹1,150</h5>
+                           <h5>Day 2 Cost for 6 Friends: ₹1,150 x 6 = ₹6,900</h5>
+
+                           <h3>Day 3: Delhi to Agra Day Trip</h3>
+                           <p>Train to Agra and back. Cost: ₹400 per person.</p> 
+                           <p>Taj Mahal, Agra Fort.</p>
+                           <p>Meals: Breakfast in Delhi, lunch in Agra, dinner back in Delhi.</p>
+                           <p>Budget hotel. Cost: ₹500 per night per person.</p>
+                           <h5>Day 3 Cost per Person: ₹400 (train) + ₹500 (accommodation) + ₹400 (meals) + ₹250 (sightseeing and transport) = ₹1,550</h5>
+                           <h5>Day 3 Cost for 6 Friends: ₹1,550 x 6 = ₹9,300</h5>
+
+                           <h3>Day 4: Delhi Sightseeing</h3>
+                           <p>Humayun’s Tomb, Lotus Temple, Akshardham Temple.</p> 
+                           <p>Meals: Local restaurants.</p>
+                           <p>Budget hotel. Cost: ₹500 per night per person.</p>
+                           <h5>Day 4 Cost per Person: ₹500 (accommodation) + ₹400 (meals) + ₹250 (local transport and entry fees) = ₹1,150</h5>
+                           <h5>Day 4 Cost for 6 Friends: ₹1,150 x 6 = ₹6,900</h5>
+
+                           <h3>Day 5: Day Trip to Jaipur</h3>
+                           <p>Train to Jaipur and back. Cost: ₹600 per person.</p>
+                           <p>Amer Fort, City Palace, Jantar Mantar, Hawa Mahal.</p>  
+                           <p>Meals: Breakfast in Delhi, lunch in Jaipur, dinner Delhi</p>
+                           <p>Budget hotel. Cost: ₹500 per night per person.</p>
+                           <h5>Day 5 Cost per Person: ₹600 (train) + ₹500 (accommodation) + ₹400 (meals) + ₹250 (sightseeing and transport) = ₹1,750</h5>
+                           <h5>Day 5 Cost for 6 Friends: ₹1,750 x 6 = ₹10,500</h5>
+
+                           <h3>Day 6: Delhi Sightseeing</h3>
+                           <p>National Museum, Garden of Five Senses.</p>
+                           <p>Meals: Local restaurants.</p>
+                           <p>Budget hotel. Cost: ₹500 per night per person.</p>
+                           <h5>Day 6 Cost per Person: ₹500 (accommodation) + ₹400 (meals) + ₹250 (local transport and entry fees) = ₹1,150</h5>
+                           <h5>Day 6 Cost for 6 Friends: ₹1,150 x 6 = ₹6,900</h5>
+
+                           <h3>Day 7: Delhi Sightseeing and Shopping</h3>
+                           <p>Lodi Gardens, Khan Market.</p> 
+                           <p>Meals: Local restaurants.</p>
+                           <p>Budget hotel. Cost: ₹500 per night per person.</p>
+                           <h5>Day 7 Cost per Person: ₹500 (accommodation) + ₹400 (meals) + ₹250 (local transport and shopping) = ₹1,150</h5>
+                           <h5>Day 7 Cost for 6 Friends: ₹1,150 x 6 = ₹6,900</h5>
+
+                           <h3>Day 8: Departure to Hyderabad</h3>
+                           <p>Train back to Hyderabad (3AC class). Cost: ₹1,000 per person.</p> 
+                           <p>Meals: Breakfast in Delhi, lunch, and dinner on the train.</p>
+                           <h5>Day 8 Cost per Person: ₹1,000 (train) + ₹400 (meals) = ₹1,400</h5>
+                           <h5>Day 8 Cost for 6 Friends: ₹1,400 x 6 = ₹8,400</h5>
+                           <br>
+                        </code>
+                </section>
+                        <br>
+                        <section id="code">
+                            <h2>Total Cost Breakdown</h2>
+                            <code class="codehtml">
+                                <br>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Expense</th>
+                                            <th>Cost per Person</th>
+                                            <th>Total Cost for 6 Friends</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Train (Hyderabad to Delhi, 3AC)</td>
+                                            <td>₹1,000</td>
+                                            <td>₹6,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Train (Delhi to Hyderabad, 3AC)</td>
+                                            <td>₹1,000</td>
+                                            <td>₹6,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Accommodation (7 nights)</td>
+                                            <td>₹500 per night</td>
+                                            <td>₹3,500 per night x 7 nights = ₹24,500</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Meals</td>
+                                            <td>₹400 per day</td>
+                                            <td>₹400 x 8 days = ₹3,200</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sightseeing and Local Transport</td>
+                                            <td>₹250 per day</td>
+                                            <td>₹250 x 8 days = ₹2,000</td>
+                                        </tr>
+                                        <tr class="total-cost">
+                                            <td>Total Cost</td>
+                                            <td>₹2,500</td>
+                                            <td>₹36,500</td>
+                                        </tr>
+                                    </tbody>
+                                </table><br>
+                            </code>
+                        </section>
+
+                        <div class="btn">
+                            <a class="blue" href="registration.html">Book Now</a>
+                        </div>
+                
+            </div>
+        </section>
+        <!--Footer page-->
+        <footer id="footer">
+            <div class="footer-top">
+              <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Our College Address</h3>
+                        <p>
+                            Telangana <br>
+                            Hyderabad <br>
+                            Ghatkesar <br>
+                        </p>
+                        <strong>Phone:</strong> +91 0000000000 <br>
+                        <strong>Email:</strong> acetechs@gmail.com <br>
+                    </div>   
+                </div>       
+            </div>
+            <hr>
+            <div class="container py-4">
+              <div class="copyright">
+                &copy; Copyright <strong><span>ACE Tech's</span></strong>. All Rights Reserved
+              </div>
+              <div class="credits">
+                Designed by <a href="#">Bharath&Nikith</a>
+              </div>
+            </div>
+        </footer>
+        <script src="js.js"></script>
+        <script>
+            $('#menu-close').click(function(){
+                $('nav .navigation ul').addClass('active')
+            });
+            $('#menu-close').click(function(){
+                $('nav .navigation ul').removeClass('active')
+            });
+
+        </script> 
+    </body>
+</html>

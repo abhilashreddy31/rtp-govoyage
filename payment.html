@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | Go Voyage</title>
+    
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+/* nav bar */
+.navbar-main {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 90px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            /* padding: 1vw 8vw; */
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+            z-index: 1;
+}
+.navbar-main .newimg{
+    width: 40px;
+    margin-left: 40px;
+    margin: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.navbar-main .logoimg {
+              width: 180px;
+              margin-left: 50px;
+              cursor: pointer;
+}
+.navbar-main .navigation{
+              display: flex;
+}
+.navbar-main #menu-btn{
+              width: 30px;
+              height: 30px;
+              display: none;
+
+}
+.navbar-main #memu-close{
+              display: none;
+          }
+.navbar-main .navigation ul {
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+}
+.navbar-main .navigation ul li {
+              list-style: none;
+              margin-left: 30px;
+}
+.navbar-main .navigation ul li a {
+              text-decoration: none;
+              color: rgb(21, 21, 100);
+              font-size: 20px;
+              font-weight: bold;
+              transition: 0.3s ease;
+}
+.navbar-main .navigation ul li a.active,
+.navbar-main .navigation ul li a:hover {
+              color: #FDC93B;
+}
+.book-now-link {
+              display: none; 
+          }
+
+.book-now-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #2ec6c1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.book-now-button:hover {
+    background-color: #FDC93B;
+  }
+  .cart-container {
+    position: relative;
+    margin-right: 10px;
+}
+
+.cart-link {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.cart-link .fas {
+    font-size: 24px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #FDC93B;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 8px;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:50px;
+  min-height: 100vh;
+  /* background: linear-gradient(90deg, #20a870 60% 40.1%); */
+  background-color: aquamarine;
+}
+
+.container form{
+  padding:20px;
+  width:700px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.container form .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+}
+
+.container form .row .col{
+  flex:1 1 250px;
+}
+
+.container form .row .col .title{
+  font-size: 20px;
+  color:#333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.container form .row .col .inputBox{
+  margin:15px 0;
+}
+
+.container form .row .col .inputBox span{
+  margin-bottom: 10px;
+  display: block;
+}
+
+.container form .row .col .inputBox input{
+  width: 100%;
+  border:1px solid #ccc;
+  padding:10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.container form .row .col .inputBox input:focus{
+  border:1px solid #000;
+}
+
+.container form .row .col .flex{
+  display: flex;
+  gap:15px;
+}
+
+.container form .row .col .flex .inputBox{
+  margin-top: 5px;
+}
+
+.container form .row .col .inputBox img{
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn{
+  width: 100%;
+  padding:12px;
+  font-size: 17px;
+  background: #2ec6c1;
+  color:#fff;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.container form .submit-btn:hover{
+  background: #FDC93B;
+}
+</style>
+<body>
+   <!--nav bar-->
+   <nav class="navbar-main">
+    <img class="logoimg" src="images_1/newlogo2.png" alt="">
+    <div class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="destination.html">Destination</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><div onclick="window.location.href='signup.html';" class="courses">   
+              <a href="signup.php" class="signin-link"></a>
+              <button class="signin-button">Sign in</button>
+          </div>
+          </li>
+          <li class="cart-container">
+            <a href="cart.html" class="cart-link">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </li>
+        </ul>
+    </div>
+</nav>
+<br><br><br><br>
+<div class="container">
+    <form action="">
+        <div class="row">
+            <div class="col">
+                <h3 class="title">billing address</h3>
+                <div class="inputBox">  
+                    <span>full name :</span>
+                    <input type="text" placeholder="Virat Kohli">
+                </div>
+                <div class="inputBox">
+                    <span>email :</span>
+                    <input type="email" placeholder="example@example.com">
+                </div>
+                <div class="inputBox">
+                    <span>address :</span>
+                    <input type="text" placeholder="room - street - locality">
+                </div>
+                <div class="inputBox">
+                    <span>city :</span>
+                    <input type="text" placeholder="mumbai">
+                </div>
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>state :</span>
+                        <input type="text" placeholder="india">
+                    </div>
+                    <div class="inputBox">
+                        <span>zip code :</span>
+                        <input type="text" placeholder="123456">
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h3 class="title">payment</h3>
+                <div class="inputBox">
+                    <span>cards accepted :</span>
+                    <img src="images_1/Credit-Card-Icons.jpg" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>name on card :</span>
+                    <input type="text" placeholder="Mr. ViratKohli">
+                </div>
+                <div class="inputBox">
+                    <span>credit card number :</span>
+                    <input type="number" placeholder="1111-2222-3333-4444">
+                </div>
+                <div class="inputBox">
+                    <span>exp month :</span>
+                    <input type="text" placeholder="january">
+                </div>
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>exp year :</span>
+                        <input type="number" placeholder="2028">
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" placeholder="134">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input type="submit" value="proceed to checkout" class="submit-btn">
+    </form>
+</div>  
+<script>
+  $('#menu-btn').click(function(){
+      $('nav .navigation ul').addClass('active')
+  });
+  $('#menu-close').click(function(){
+      $('nav .navigation ul').removeClass('active')
+  });
+  document.addEventListener('DOMContentLoaded', () => {
+      const cartLink = document.querySelector('.cart-link');
+      const cartCount = document.querySelector('.cart-count');
+      let itemCount = 0;
+
+      cartLink.addEventListener('click', () => {
+          itemCount++;
+          cartCount.textContent = itemCount;
+          cartCount.style.display = 'block';
+      });
+  });
+</script>
+<script>
+  function togglePassword() {
+  const passwordField = document.getElementById('password');
+  const passwordToggle = document.querySelector('.toggle-password');
+  
+  if (passwordField.type === 'password') {
+      passwordField.type = 'text';
+      passwordToggle.textContent = '';
+  } else {
+      passwordField.type = 'password';
+      passwordToggle.textContent = '';
+  }
+}
+  </script>  
+</body>
+</html>

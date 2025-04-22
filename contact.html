@@ -1,0 +1,153 @@
+<!--OM-->
+<!--Jai Shree Ram-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GO Voyage</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/8a26f48f96.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="images_1/gov.jpg">
+    </head>
+    <body>
+        <!--nav bar-->
+        <nav class="navbar-main">
+            <img class="logoimg" src="images_1/newlogo2.png" alt="">
+            <div class="navigation">
+                <ul>
+                    <i id="memu-close" class="fa-solid fa-circle-xmark"></i>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="destination.html">Destination</a></li>
+                    <li><a class="active" href="contact.html">Contact</a></li>
+                    <li><div onclick="window.location.href='signup.html';" class="courses">   
+                        <a href="signup.php" class="signin-link"></a>
+                        <button class="signin-button">Sign in</button>
+                    </div>
+                    </li>
+                    <li class="cart-container">
+                        <a href="cart.html" class="cart-link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+              </ul>
+            </div> 
+        </nav>
+        <!-- Home -->
+
+        <section id="contact-home">
+            <h1>Contact Us</h1>
+            <h2>Ready to start your adventure with GO Voyage? Reach out to us! Our dedicated team is here to answer your questions, provide expert advice, and help plan your perfect journey.</h2>
+        </section>
+        <section id="contact">
+            <div class="getin">
+                <h2>Get in touch</h2>
+                <p>for more information</p>
+
+                <div class="getin-details">
+                    <h3>Address</h3>
+                    <div>
+                        <i class="fa-solid fa-house" style="color: #8718e2;"></i>
+                        <p><br>Telangana<br>
+                            Hyderabad<br>
+                            Ghatkesar</p>
+                    </div>
+                    <h3>Phone</h3>
+                    <div>
+                        <i class="fas fa-phone alt get" style="color: #8718e2;"></i>
+                        <p><br>+91 9999999999<br>+91 9999999999</p>
+                    </div>
+                    <h3>support</h3>
+                    <div>
+                        <i class="fa-sharp fa-solid fa-envelope" style="color: #8718e2;"></i>
+                        <p><br>govoyage@gmail.com</p>
+                    </div>
+                        <h3>follow us</h3>
+                        <div class="pro-links">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-whatsapp"></i>
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                </div>
+            </div>
+                <div class="form">
+                    <h4>Connect</h4>
+                    <p>with us</p>
+                    <div class="form-row">
+                        <input type="text" placeholder="Your Name">
+                        <input type="text" placeholder="E-mail">
+                    </div>
+                    <div class="form-col" >
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <div class="form-col" >
+                        <textarea style="font-family: sans-serif;" name="" id="" cols="30" rows="8" placeholder="How can we help you?"></textarea>
+
+                    </div>
+                    <div class="form-col" >
+                        <button>Send Message</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Footer page-->
+        <footer id="footer">
+            <div class="footer-top">
+              <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Our Address</h3>
+                        <p>
+                            Telangana <br>
+                            Hyderabad <br>
+                            Ghatkesar <br>
+                        </p>
+                        <strong>Phone:</strong> +91 9999999999 <br>
+                        <strong>Email:</strong> govoyage@gmail.com <br>
+                    </div>   
+                </div>       
+            </div>
+            <hr>
+            <div class="container py-4">
+              <div class="copyright">
+                &copy; Copyright <strong><span>GO Voyage</span></strong>. All Rights Reserved
+              </div>
+              <div class="credits">
+                Designed by <a href="#">Abhi</a>
+              </div>
+            </div>
+        </footer>
+        <script>
+            $('#menu-btn').click(function(){
+                $('nav .navigation ul').addClass('active')
+            });
+            $('#menu-close').click(function(){
+                $('nav .navigation ul').removeClass('active')
+            });
+            document.addEventListener('DOMContentLoaded', () => {
+                const cartLink = document.querySelector('.cart-link');
+                const cartCount = document.querySelector('.cart-count');
+                let itemCount = 0;
+          
+                cartLink.addEventListener('click', () => {
+                    itemCount++;
+                    cartCount.textContent = itemCount;
+                    cartCount.style.display = 'block';
+                });
+            });
+          </script>
+        <script>
+            $('#menu-close').click(function(){
+                $('nav .navigation ul').addClass('active')
+            });
+            $('#menu-close').click(function(){
+                $('nav .navigation ul').removeClass('active')
+            });
+
+        </script>
+    </body>
+</html>

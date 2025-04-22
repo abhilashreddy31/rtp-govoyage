@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GO Voyage</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/8a26f48f96.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/x-icon" href="images_1/gov.jpg">
+
+    </head>
+    <body>
+        <!--nav bar-->
+        <nav class="navbar-main">
+            <img class="logoimg" src="images_1/newlogo2.png" alt="">
+            <div class="navigation">
+                <ul>
+                    <i id="memu-close" class="fa-solid fa-circle-xmark"></i>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="destination.html">Destination</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><div onclick="window.location.href='signup.php';" class="courses">   
+                        <a href="signup.php" class="signin-link"></a>
+                        <button class="signin-button">Sign in</button>
+                    </div>
+                    </li>
+                    <li class="cart-container">
+                        <a class="active" href="cart.html" class="cart-link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+               </ul>
+            </div> 
+        </nav>
+        <!-- Home -->
+
+        <section id="cart-home">
+            <h1>Travel Cart</h1>
+            <h2>Add desired destinations and activities to your travel cart for easy planning, organizing, and booking your perfect trip itinerary.</h2>
+        </section>
+        <!-- innovation -->
+        <section id="course">
+            <h1>Itineraries..</h1>
+            <div class="course-box">
+                <div onclick="window.location.href='plan01.html';" class="courses">
+                    <img src="images_1/plan01_1.jpg" alt="">
+                    <div class="details">
+                        <h6>Delhi - Pack 01</h6>
+                        <p>Delhi, India’s capital, blends historic sites like the Red Fort and Qutub Minar with modern attractions and vibrant culture.</p>
+                    </div>
+                </div>
+                <div onclick="window.location.href='#';" class="courses">
+                    <img src="images_1/plan01_2.jpg" alt="">
+                    <div class="details">
+                        <h6>Delhi - Pack 02</h6>
+                        <p>Delhi, the capital of India, combines historic monuments like India Gate with modern attractions and dynamic street life.</p>
+                    </div>
+                </div>
+                <div onclick="window.location.href='#';" class="courses">
+                    <img src="images_1/plan01.jpg" alt="">
+                    <div class="details">
+                        <h6>Delhi - Pack 03</h6>
+                        <p>Delhi, India’s capital city, offers historic sites like Red Fort, vibrant street food, and cultural events year-round.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        
+        <!--Footer page-->
+        <footer id="footer">
+            <div class="footer-top">
+              <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Our Address</h3>
+                        <p>
+                            Telangana <br>
+                            Hyderabad <br>
+                            Ghatkesar <br>
+                        </p>
+                        <strong>Phone:</strong> +91 9999999999 <br>
+                        <strong>Email:</strong> govoyage@gmail.com <br>
+                    </div>   
+                </div>       
+            </div>
+            <hr>
+            <div class="container py-4">
+              <div class="copyright">
+                &copy; Copyright <strong><span>GO Voyage</span></strong>. All Rights Reserved
+              </div>
+              <div class="credits">
+                Designed by <a href="#">Abhi</a>
+              </div>
+            </div>
+        </footer>
+        <script>
+            $('#menu-btn').click(function(){
+                $('nav .navigation ul').addClass('active')
+            });
+            $('#menu-close').click(function(){
+                $('nav .navigation ul').removeClass('active')
+            });
+            document.addEventListener('DOMContentLoaded', () => {
+                const cartLink = document.querySelector('.cart-link');
+                const cartCount = document.querySelector('.cart-count');
+                let itemCount = 0;
+          
+                cartLink.addEventListener('click', () => {
+                    itemCount++;
+                    cartCount.textContent = itemCount;
+                    cartCount.style.display = 'block';
+                });
+            });
+          </script>
+        <script>
+            $('#menu-close').click(function(){
+                $('nav .navigation ul').addClass('active')
+            });
+            $('#menu-close').click(function(){
+                $('nav .navigation ul').removeClass('active')
+            });
+
+        </script>
+    </body>
+</html>
